@@ -8,8 +8,8 @@ I started my projecct with
 
 to meet the rubric 
 
-CRITERIA
-MEETS SPECIFICATIONS
+##Udacity Criteria
+
 Architecture
 
 The project should have a
@@ -51,9 +51,6 @@ When clicking an item from the navigation menu, the link should scroll to the ap
 
 Documentation
 
-CRITERIA
-MEETS SPECIFICATIONS
-README
 
 The ReadMe file should have non-default text in it that is specific to this project. It doesn’t have to be thorough, but should have some basic information, and use correct markdown.
 
