@@ -1,12 +1,20 @@
 # Landing Page Project
+This is Udacity Front-end Nano degree First Project
+
 
 I started my projecct with 
 
 
-1. Split to 3 functions (navBarConstructor,activateSection,newSectionConstructor,lastSectionDeleter)
-2.work on functions 
+## actually I icluded all JS functionality in 4 functions 
+### navBarConstructor
+this function automaticly bulds the nav-bar and add interactivety to every element
+### activateSection 
+thi function highlight the active section in both nav-bar and view 
+### newSectionConstructor 
+this is my favorite plaayed function as i created a button to dynamicly add sections to page 
+### lastSectionDeleter
+this is the last advanced fucntion in which I made it delete last section in current page dynamicly
 
-to meet the rubric 
 
 ## Udacity Criteria
 
