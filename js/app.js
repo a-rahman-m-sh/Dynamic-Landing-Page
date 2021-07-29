@@ -95,3 +95,36 @@ function lastSectionDeleter() {
 
 deleteButton = document.querySelector(".delete_section");
 deleteButton.addEventListener("click", lastSectionDeleter);
+
+function activateSectionOnScroll() {
+  let allSections = document.querySelectorAll("section");
+  let allNav = document.querySelectorAll("li");
+  allSections.forEach((sec) => {
+    let sectionSize = sec.getBoundingClientRect().top;
+    let secAttrSec = sec.getAttribute("data-nav");
+    if (sectionSize < 150 && sectionSize >= -150) {
+      if (!sec.classList.contains("your-active-class")) {
+        // find last active section
+        let lastActiveSection = document.querySelector(
+          "section.your-active-class"
+        );
+        // remave class from last active
+        lastActiveSection.classList.remove("your-active-class");
+        // add class to carrent active
+        sec.classList.add("your-active-class");
+        allNav.forEach((navEl) => {
+          let secAttrNav = navEl.textContent;
+          if (secAttrNav == secAttrSec) {
+            let lastActiveNav = document.querySelector("li.your-active-class");
+            // remave class from last active
+            lastActiveNav.classList.remove("your-active-class");
+            // add class to carrent active
+            navEl.classList.add("your-active-class");
+          }
+        });
+      }
+    }
+  });
+}
+
+window.addEventListener("scroll", activateSectionOnScroll);
