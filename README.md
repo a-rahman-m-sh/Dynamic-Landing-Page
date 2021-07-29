@@ -8,7 +8,7 @@ I started my projecct with
 
 to meet the rubric 
 
-##Udacity Criteria
+## Udacity Criteria
 
 Architecture
 
