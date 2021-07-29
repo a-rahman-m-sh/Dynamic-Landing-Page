@@ -16,6 +16,9 @@ function navBarConstructor() {
     navLink.textContent = sec.getAttribute("data-nav");
     fragment.appendChild(navLink);
     navLink.classList.add("menu__link");
+    if (navLink.textContent === "Section 1") {
+      navLink.classList.add("your-active-class");
+    }
     navLink.addEventListener("click", activateSection);
   });
   navList.appendChild(fragment);
@@ -28,15 +31,21 @@ function activateSection(evt) {
   let sectionView = document.querySelector(
     `section[data-nav='${sectionName}']`
   );
-  console.log(sectionView);
-  if (!targetNavElement.classList.contains("your-active-class")) {
+  if (!sectionView.classList.contains("your-active-class")) {
     // find last active section
-    let lastActiveSection = document.querySelector(".your-active-class");
+    let lastActiveSection = document.querySelector("section.your-active-class");
     // remave class from last active
     lastActiveSection.classList.remove("your-active-class");
     // add class to carrent active
-    targetNavElement.classList.add("your-active-class");
+    sectionView.classList.add("your-active-class");
     sectionView.scrollIntoView({ behavior: "smooth" });
+  }
+  if (!targetNavElement.classList.contains("your-active-class")) {
+    let lastActiveNav = document.querySelector("li.your-active-class");
+    // remave class from last active
+    lastActiveNav.classList.remove("your-active-class");
+    // add class to carrent active
+    targetNavElement.classList.add("your-active-class");
   }
 }
 // section constructor constructs new section when revoked

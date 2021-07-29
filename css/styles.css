@@ -89,6 +89,9 @@ section {
   transition: ease 0.3s all;
   cursor: pointer;
 }
+li.your-active-class {
+  background: rgb(221, 202, 202);
+}
 
 /* Header Styles */
 .page__header {
